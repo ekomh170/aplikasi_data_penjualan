@@ -11,9 +11,7 @@
                 <a class="nav-link has-arrow @@if (context.page ===  'dashboard') { active }" href="{{ url('/') }}">
                     <i data-feather="home" class="nav-icon icon-xs me-2"></i> Dashboard
                 </a>
-
             </li>
-
 
             <!-- Nav item -->
             <li class="nav-item">
@@ -22,19 +20,28 @@
 
             <li class="nav-item">
                 <a class="nav-link @@if (context.page === 'layouts') { active }"
-                    href="{{ route('master-barang.index') }}">
-                    <i class="nav-icon icon-xs me-2 bi bi-table">
+                    href="{{ route('jenis-penjualan.index') }}">
+                    <i data-feather="database" class="nav-icon icon-xs me-2">
                     </i>
-                    Data Penjualan
+                    Jenis Data Penjualan
                 </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link @@if (context.page === 'layouts') { active }"
-                    href="{{ route('master-barang.create') }}">
-                    <i data-feather="plus-square" class="nav-icon icon-xs me-2">
+                    href="{{ route('master-penjualan.index') }}">
+                    <i data-feather="database" class="nav-icon icon-xs me-2">
                     </i>
-                    Tambah Data Penjualan
+                    Master Data Penjualan
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link @@if (context.page === 'layouts') { active }"
+                    href="{{ route('transaksi-penjualan.index') }}">
+                    <i data-feather="database" class="nav-icon icon-xs me-2">
+                    </i>
+                    Transaksi Data Penjualan
                 </a>
             </li>
 

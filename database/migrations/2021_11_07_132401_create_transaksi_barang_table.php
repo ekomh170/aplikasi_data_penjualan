@@ -18,8 +18,8 @@ class CreateTransaksiBarangTable extends Migration
             $table->integer('stok');
             $table->integer('jumlah_terjual');
             $table->timestamps();
-            $table->unsignedBigInteger('master_barang_id');
-            $table->foreign('master_barang_id')->references('id')->on('master_barang');
+            $table->unsignedBigInteger('nama_barang_id');
+            $table->foreign('nama_barang_id')->references('id')->on('master_barang');
         });
     }
 

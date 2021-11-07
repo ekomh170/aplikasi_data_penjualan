@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MbarangController;
+use App\Http\Controllers\MpenjualanController;
+use App\Http\Controllers\JpenjualanController;
+use App\Http\Controllers\TpenjualanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,9 @@ use App\Http\Controllers\MbarangController;
 |
 */
 
-Route::resource('/master-barang', MbarangController::class)->except(['show']);
+Route::resource('/master-penjualan', MpenjualanController::class)->except(['show']);
+Route::resource('/jenis-penjualan', JpenjualanController::class)->except(['show']);
+Route::resource('/transaksi-penjualan', TpenjualanController::class)->only(['index']);
 
 Route::get('/', function () {
     return view('Dashboard.index');

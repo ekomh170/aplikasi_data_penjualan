@@ -58,43 +58,43 @@ class DatabaseSeeder extends Seeder
         Tbarang::create([
             'stok' => '100',
             'jumlah_terjual' => '10',
-            'master_barang_id' => '1',
+            'nama_barang_id' => '1',
         ]);
 
         Tbarang::create([
             'stok' => '100',
             'jumlah_terjual' => '19',
-            'master_barang_id' => '2',
+            'nama_barang_id' => '2',
         ]);
 
         Tbarang::create([
             'stok' => '90',
             'jumlah_terjual' => '15',
-            'master_barang_id' => '1',
+            'nama_barang_id' => '1',
         ]);
 
         Tbarang::create([
             'stok' => '100',
             'jumlah_terjual' => '20',
-            'master_barang_id' => '3',
+            'nama_barang_id' => '3',
         ]);
 
         Tbarang::create([
             'stok' => '100',
             'jumlah_terjual' => '30',
-            'master_barang_id' => '4',
+            'nama_barang_id' => '4',
         ]);
 
         Tbarang::create([
             'stok' => '100',
             'jumlah_terjual' => '25',
-            'master_barang_id' => '5',
+            'nama_barang_id' => '5',
         ]);
 
         Tbarang::create([
             'stok' => '81',
             'jumlah_terjual' => '5',
-            'master_barang_id' => '2',
+            'nama_barang_id' => '2',
         ]);
         //Transaksi
     }

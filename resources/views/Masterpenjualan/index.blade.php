@@ -5,26 +5,20 @@
 Aplikasi Data Penjualan
 @endsection
 @section('judul_sub')
-Kumpulan Data Penjualan
+Menu Data Penjualan
 @endsection
 @section('content')
 <div class="py-6">
     <div class="row mb-6">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div id="examples" class="mb-4">
-                <h2>Data Penjualan</h2>
+                <h2>Master Data Barang</h2>
             </div>
             <div class="card">
-                <ul class="nav nav-line-bottom" id="pills-tab-table" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="pills-table-design-tab" data-bs-toggle="pill"
-                            href="#pills-table-design" role="tab" aria-controls="pills-table-design"
-                            aria-selected="true">Design</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="pills-table-html-tab" data-bs-toggle="pill" href="#pills-table-html"
-                            role="tab" aria-controls="pills-table-html" aria-selected="false">HTML</a>
-                    </li>
+                <ul class="pt-2 pb-2 pl-2 nav nav-line-bottom" id="pills-tab-table" role="tablist">
+                    <a href="{{ route('master-penjualan.create') }}" class="m-2 btn btn-outline-success my-1 btn-sm">
+                        <i data-feather="plus"></i> Tambah Data
+                    </a>
                 </ul>
                 <!-- Tab content -->
                 <div class="tab-content p-4" id="pills-tabContent-table">
@@ -39,33 +33,32 @@ Kumpulan Data Penjualan
                                         <th scope="col">Nama Barang</th>
                                         <th scope="col">Stok</th>
                                         <th scope="col">Jumlah Terjual</th>
-                                        <th scope="col">Tanggal Transaksi</th>
                                         <th scope="col">Jenis Barang</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($barang as $item => $key)
+                                    @foreach ($mpenjualan as $item => $key)
                                     <tr>
                                         <th scope="row">{{ $item + 1 }}</th>
                                         <td>{{ $key->nama_barang }}</td>
-                                        <td>{{ $key->stok }}</td>
-                                        <td>{{ $key->jumlah_terjual }}</td>
-                                        <td>{{ $key->created_at }}</td>
-                                        <td>{{ $key->jenis_barang }}</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>{{ $key->jenis_barang_id }}</td>
                                         <td>
-                                            <button type="submit" class="btn btn-outline-success my-1 btn-sm">
-                                                <i data-feather="plus"></i>
-                                            </button>
-
-                                            <button type="submit" class="btn btn-outline-warning my-1 btn-sm">
+                                            <a href="master-barang/{{ $key->id }}/edit"
+                                                class="btn btn-outline-warning my-1 btn-sm">
                                                 <i data-feather="edit"></i>
-                                            </button>
-
-                                            <button type=" submit" class="btn btn-outline-danger my-1 btn-sm"
-                                                value="Delete">
-                                                <i data-feather="trash"></i>
-                                            </button>
+                                            </a>
+                                            <form action="/master-barang/{{$key->id}}" method="POST"
+                                                class="display-non">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type=" submit" class="btn btn-outline-danger my-1 btn-sm"
+                                                    value="Delete">
+                                                    <i data-feather="trash"></i>
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
                                     @endforeach

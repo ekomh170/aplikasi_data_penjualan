@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Mbarang;
+use App\Models\Mpenjualan;
+use App\Models\Jpenjualan;
 use Illuminate\Http\Request;
 
-class MbarangController extends Controller
+class MpenjualanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class MbarangController extends Controller
      */
     public function index()
     {
-        $barang = Mbarang::all();
-        return view('Mbarang.index', compact('barang'));
+        $mpenjualan = Mpenjualan::all();
+        return view('Masterpenjualan.index', compact('mpenjualan'));
     }
 
     /**
@@ -25,7 +26,8 @@ class MbarangController extends Controller
      */
     public function create()
     {
-        return view('Mbarang.create');
+        $jenis_barang = Jpenjualan::all();
+        return view('Masterpenjualan.create', compact('jenis_barang'));
     }
 
     /**
@@ -38,16 +40,12 @@ class MbarangController extends Controller
     {
         $request->validate([
             'nama_barang' => 'required',
-            'stok' => 'required',
-            'jumlah_terjual' => 'required',
-            'jenis_barang' => 'required',
+            'jenis_barang_id' => 'required',
         ]);
 
-        Mbarang::create([
+        Mpenjualan::create([
             "nama_barang" => $request["nama_barang"],
-            "stok" => $request["stok"],
-            "jumlah_terjual" => $request["jumlah_terjual"],
-            "jenis_barang" => $request["jenis_barang"],
+            "jenis_barang_id" => $request["jenis_barang_id"],
         ]);
 
         return redirect('/master-barang');
@@ -57,54 +55,51 @@ class MbarangController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Mbarang  $mbarang
+     * @param  \App\Models\Mpenjualan  $Mpenjualan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Mbarang $id)
+    public function edit(Mpenjualan $id)
     {
-        $barang = Mbarang::find($id);
-        return view('Mbarang.edit', compact('barang'));
+        $mpenjualan = Mpenjualan::find($id);
+        $jenis_barang = Jpenjualan::all();
+        return view('Masterpenjualan.edit', compact('mpenjualan', 'jenis_barang'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Mbarang  $mbarang
+     * @param  \App\Models\Mpenjualan  $Mpenjualan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Mbarang $id)
+    public function update(Request $request, Mpenjualan $id)
     {
         $request->validate([
             "nama_barang" => $request["nama_barang"],
-            "stok" => $request["stok"],
-            "jumlah_terjual" => $request["jumlah_terjual"],
-            "jenis_barang" => $request["jenis_barang"],
+            "jenis_barang_id" => $request["jenis_barang_id"],
         ]);
 
-        $barang = Mbarang::find($id);
+        $mpenjualan = Mpenjualan::find($id);
 
         $data_barang = [
             "nama_barang" => $request["nama_barang"],
-            "stok" => $request["stok"],
-            "jumlah_terjual" => $request["jumlah_terjual"],
-            "jenis_barang" => $request["jenis_barang"],
+            "jenis_barang_id" => $request["jenis_barang_id"],
         ];
 
-        $barang->update($data_barang);
+        $mpenjualan->update($data_barang);
         return redirect('/master-barang');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Mbarang  $mbarang
+     * @param  \App\Models\Mpenjualan  $Mpenjualan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Mbarang $id)
+    public function destroy(Mpenjualan $id)
     {
-        $barang = Mbarang::find($id);
-        $barang->delete();
+        $mpenjualan = Mpenjualan::find($id);
+        $mpenjualan->delete();
         return redirect('/master-barang');
     }
 }
