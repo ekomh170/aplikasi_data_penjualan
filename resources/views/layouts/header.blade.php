@@ -99,8 +99,8 @@
             <li class="dropdown ms-2">
                 <a class="rounded-circle" href="#" role="button" id="dropdownUser" data-bs-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    <div class="avatar avatar-md avatar-indicators avatar-online">
-                        <img alt="avatar" src="{{ asset('/assets') }}/images/avatar/avatar-1.jpg"
+                    <div class="avatar avatar-md">
+                        <img alt="avatar" src="{{ asset('/assets') }}/images/my-img/my_foto.jpeg"
                             class="rounded-circle" />
                     </div>
                 </a>
@@ -109,7 +109,7 @@
 
 
                         <div class="lh-1 ">
-                            <h5 class="mb-1"> John E. Grainger</h5>
+                            <h5 class="mb-1">Eko Muchamad Haryono</h5>
                             <a href="#" class="text-inherit fs-6">View my profile</a>
                         </div>
                         <div class=" dropdown-divider mt-3 mb-2"></div>
@@ -119,31 +119,26 @@
 
                         <li>
                             <a class="dropdown-item" href="#">
-                                <i class="me-2 icon-xxs dropdown-item-icon" data-feather="user"></i>Edit
-                                Profile
+                                <i class="me-2 icon-xxs dropdown-item-icon" data-feather="user"></i>My Portfolio
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#">
-                                <i class="me-2 icon-xxs dropdown-item-icon" data-feather="activity"></i>Activity Log
+                                <i class="me-2 icon-xxs dropdown-item-icon" data-feather="github"></i>My Github
                             </a>
 
 
                         </li>
 
                         <li>
-                            <a class="dropdown-item text-primary" href="#">
-                                <i class="me-2 icon-xxs text-primary dropdown-item-icon" data-feather="star"></i>Go Pro
+                            <a class="dropdown-item text-primary" href="#" target="_blank">
+                                <i class="me-2 icon-xxs text-primary dropdown-item-icon" data-feather="gitlab"></i>My
+                                Gitlab
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#">
-                                <i class="me-2 icon-xxs dropdown-item-icon" data-feather="settings"></i>Account Settings
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ asset('/assets') }}/index.html">
-                                <i class="me-2 icon-xxs dropdown-item-icon" data-feather="power"></i>Sign Out
+                                <i class="me-2 icon-xxs dropdown-item-icon" data-feather="book"></i>Dokumentasi
                             </a>
                         </li>
                     </ul>

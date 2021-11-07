@@ -36,6 +36,21 @@ class MbarangController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nama_barang' => 'required',
+            'stok' => 'required',
+            'jumlah_terjual' => 'required',
+            'jenis_barang' => 'required',
+        ]);
+
+        Mbarang::create([
+            "nama_barang" => $request["nama_barang"],
+            "stok" => $request["stok"],
+            "jumlah_terjual" => $request["jumlah_terjual"],
+            "jenis_barang" => $request["jenis_barang"],
+        ]);
+
+        return redirect('/master-barang');
     }
 
 
@@ -60,6 +75,24 @@ class MbarangController extends Controller
      */
     public function update(Request $request, Mbarang $id)
     {
+        $request->validate([
+            "nama_barang" => $request["nama_barang"],
+            "stok" => $request["stok"],
+            "jumlah_terjual" => $request["jumlah_terjual"],
+            "jenis_barang" => $request["jenis_barang"],
+        ]);
+
+        $barang = Mbarang::find($id);
+
+        $data_barang = [
+            "nama_barang" => $request["nama_barang"],
+            "stok" => $request["stok"],
+            "jumlah_terjual" => $request["jumlah_terjual"],
+            "jenis_barang" => $request["jenis_barang"],
+        ];
+
+        $barang->update($data_barang);
+        return redirect('/master-barang');
     }
 
     /**
@@ -70,5 +103,8 @@ class MbarangController extends Controller
      */
     public function destroy(Mbarang $id)
     {
+        $barang = Mbarang::find($id);
+        $barang->delete();
+        return redirect('/master-barang');
     }
 }

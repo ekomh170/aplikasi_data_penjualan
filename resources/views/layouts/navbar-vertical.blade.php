@@ -2,8 +2,8 @@
 <nav class="navbar-vertical navbar">
     <div class="nav-scroller">
         <!-- Brand logo -->
-        <a class="navbar-brand" href="{{ asset('/assets') }}/index.html">
-            <img src="{{ asset('/assets') }}/images/brand/logo/logo.svg" alt="" />
+        <a class="navbar-brand" href="#">
+            <div class="h3 text-white text-center">Aplikasi Data <br>Penjualan</div>
         </a>
         <!-- Navbar nav -->
         <ul class="navbar-nav flex-column" id="sideNavbar">
@@ -38,10 +38,19 @@
                 </a>
             </li>
 
-
             <!-- Nav item -->
             <li class="nav-item">
                 <div class="navbar-heading">Documentation</div>
+            </li>
+
+
+            <!-- Nav item -->
+            <li class="nav-item">
+                <a class="nav-link has-arrow @@if (context.page === 'docs') { active }"
+                    href="https://github.com/ekomh170" target="_blank">
+                    <i data-feather="user" class="nav-icon icon-xs me-2">
+                    </i> My Portfolio
+                </a>
             </li>
 
             <!-- Nav item -->

@@ -13,7 +13,22 @@
         <!-- Page content -->
         <div id="page-content">
             @include('layouts.header')
-            @yield('content')
+            <!-- Container fluid -->
+            <div class="container-fluid px-6 py-4">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <!-- Page header -->
+                        <div>
+                            <div class="border-bottom pb-4">
+                                <div class="mb-2 mb-lg-0">
+                                    <h3 class="mb-0 fw-bold">@yield('judul_sub')</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @yield('content')
+            </div>
         </div>
     </div>
 
