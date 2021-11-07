@@ -1,10 +1,36 @@
 ## Aplikasi Berbasis Web Data Penjualan dengan Laravel 8
 
-Membuat Aplikasi Berbasis Web Data Penjualan Menggunakan Laravel 8, Yang Bertujuan Untuk Presentasi Kepada Tester.
+Membuat Aplikasi Berbasis Web Data Penjualan Menggunakan Laravel 8, Yang Bertujuan Untuk Presentasi Kepada Tester. Aplikasi Berbasis Web Data Penjualan dengan Laravel 8 adalah aplikasi yang berfungsi untuk melakukan pendataan barang.
+
+## Foto Aplikasi Data Penjualan
+
+<img src="public/assets_readme/img/Halaman_Utama.PNG" alt="Halaman Utama">
+
+## Cara Instalasi ke Server Lokal :
+
+-   Follow Github Saya
+-   Star Repo Github Saya
+-   Fork Repo Github Saya
+-   Clone project repo saya dengan cara menuliskan pada terminal/cmd/git bash :<br> <b>git clone https://github.com/ekomh170/aplikasi_data_penjualan.git</b>
+-   lalu masuk ke direktori repo yg sudah di clone dengan ketik lg pada terminal/cmd/git bash <b>cd aplikasi_data_penjualan</b>
+-   lalu ketik <b>composser install </b> dan <b>php artisan key generate</b>
+-   tulis migrate database pada terminal/cmd/git bash : <b>php artisan migrate:install</b>
+-   jalankan php artisan db:seed pada terminal/cmd/git bash : <b>php artisan db:seed</b>
+
+<b>Notes :</b> Untuk db:seed jika males untuk mengetikan data, akan dibuatkan langsung oleh laravelnya.
+
+## Fitur Aplikasi
+
+<!-- -   Dashboard Data Penjualan
+-   Tampilan Data Penjualan
+-   Tambah Data Penjualan
+-   Edit Data Penjualan
+-   Ubah Data Penjualan
+-   Hapus Data Penjualan -->
 
 ## Alat Yang Digunakan Untuk Membuat Web :
 
-A. Hardware :
+<b>A. Hardware :</b>
 Laptop Aspire E1-472G. Speaksifikasi :
 
 -   Ram : 4GB DD3 L Memory
@@ -13,7 +39,7 @@ Laptop Aspire E1-472G. Speaksifikasi :
 -   VGA : NVIDIA GEFORCE GT 720M with 2GB Dedicated VRAM
 -   SSD : 128 GB
 
-B. Software :
+<b>B. Software :</b>
 
 -   WAMP
 -   Visual Studio Code
@@ -22,33 +48,17 @@ B. Software :
 -   PHP 7.4.9
 -   MYSQL
 
-C. Komponen
+<b>C. Komponen :</b>
 
 -   Laravel 8
 -   Bootstrap 5
 -   Template Tambahan :
-
     -   Dash UI :
-
 -   Library :
-
     -   Carbon Laravel Time
     -   Sweet Alert
     -   Datatables
     -   TinyMCE
-
-## Fitur Aplikasi
-
--   Dashboard Data Penjualan
--   Tampilan Data Penjualan
--   Tambah Data Penjualan
--   Edit Data Penjualan
--   Ubah Data Penjualan
--   Hapus Data Penjualan
-
-## Foto Aplikasi Data Penjualan
-
-<img src="public/assets_readme/img/Halaman_Utama.PNG" alt="Halaman Utama">
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 

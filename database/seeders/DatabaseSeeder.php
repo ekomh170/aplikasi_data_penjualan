@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Jbarang;
 use App\Models\Mbarang;
+use App\Models\Tbarang;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,52 +20,82 @@ class DatabaseSeeder extends Seeder
         //Barang
         Mbarang::create([
             'nama_barang' => 'Kopi',
-            'stok' => '100',
-            'jumlah_terjual' => '10',
-            'jenis_barang' => 'Konsumsi',
-        ]);
-
-        Mbarang::create([
-            'nama_barang' => 'Teh',
-            'stok' => '100',
-            'jumlah_terjual' => '19',
-            'jenis_barang' => 'Konsumsi',
-        ]);
-
-        Mbarang::create([
-            'nama_barang' => 'Kopi',
-            'stok' => '90',
-            'jumlah_terjual' => '15',
-            'jenis_barang' => 'Konsumsi',
+            'jenis_barang_id' => '1',
         ]);
 
         Mbarang::create([
             'nama_barang' => 'Pasta Gigi',
-            'stok' => '100',
-            'jumlah_terjual' => '20',
-            'jenis_barang' => 'Pembersih',
+            'jenis_barang_id' => '2',
         ]);
 
         Mbarang::create([
             'nama_barang' => 'Sabun Mandi',
-            'stok' => '100',
-            'jumlah_terjual' => '30',
-            'jenis_barang' => 'Pembersih',
+            'jenis_barang_id' => '2',
         ]);
 
         Mbarang::create([
             'nama_barang' => 'Sampo',
-            'stok' => '100',
-            'jumlah_terjual' => '25',
-            'jenis_barang' => 'Pembersih',
+            'jenis_barang_id' => '2',
         ]);
 
         Mbarang::create([
             'nama_barang' => 'Teh',
-            'stok' => '81',
-            'jumlah_terjual' => '5',
-            'jenis_barang' => 'Konsumsi',
+            'jenis_barang_id' => '1',
         ]);
         //Barang
+
+        //Jenis_Barang
+        Jbarang::create([
+            'jenis_barang' => 'Konsumsi',
+        ]);
+
+        Jbarang::create([
+            'jenis_barang' => 'Pembersih',
+        ]);
+        //Jenis_Barang
+
+        //Transaksi
+        Tbarang::create([
+            'stok' => '100',
+            'jumlah_terjual' => '10',
+            'master_barang_id' => '1',
+        ]);
+
+        Tbarang::create([
+            'stok' => '100',
+            'jumlah_terjual' => '19',
+            'master_barang_id' => '2',
+        ]);
+
+        Tbarang::create([
+            'stok' => '90',
+            'jumlah_terjual' => '15',
+            'master_barang_id' => '1',
+        ]);
+
+        Tbarang::create([
+            'stok' => '100',
+            'jumlah_terjual' => '20',
+            'master_barang_id' => '3',
+        ]);
+
+        Tbarang::create([
+            'stok' => '100',
+            'jumlah_terjual' => '30',
+            'master_barang_id' => '4',
+        ]);
+
+        Tbarang::create([
+            'stok' => '100',
+            'jumlah_terjual' => '25',
+            'master_barang_id' => '5',
+        ]);
+
+        Tbarang::create([
+            'stok' => '81',
+            'jumlah_terjual' => '5',
+            'master_barang_id' => '2',
+        ]);
+        //Transaksi
     }
 }
