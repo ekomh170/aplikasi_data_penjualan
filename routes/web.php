@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MbarangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::resource('/master-barang', MbarangController::class)->except(['show']);
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('Dashboard.index');
 });
