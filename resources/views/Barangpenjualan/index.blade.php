@@ -12,11 +12,11 @@ Menu Data Penjualan
     <div class="row mb-6">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div id="examples" class="mb-4">
-                <h2>Master Data Penjualan</h2>
+                <h2>Barang Data Penjualan</h2>
             </div>
             <div class="card">
                 <ul class="pt-2 pb-2 pl-2 nav nav-line-bottom" id="pills-tab-table" role="tablist">
-                    <a href="{{ route('master-penjualan.create') }}" class="m-2 btn btn-outline-success my-1 btn-sm">
+                    <a href="{{ route('barang-penjualan.create') }}" class="m-2 btn btn-outline-success my-1 btn-sm">
                         <i data-feather="plus"></i> Tambah Data
                     </a>
                 </ul>
@@ -31,26 +31,22 @@ Menu Data Penjualan
                                     <tr>
                                         <th scope="col">No</th>
                                         <th scope="col">Nama Barang</th>
-                                        <th scope="col">Stok</th>
-                                        <th scope="col">Jumlah Terjual</th>
                                         <th scope="col">Jenis Barang</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($mpenjualan as $item => $key)
+                                    @foreach ($bpenjualan as $item => $key)
                                     <tr>
                                         <th scope="row">{{ $item + 1 }}</th>
                                         <td>{{ $key->nama_barang }}</td>
-                                        <td></td>
-                                        <td></td>
                                         <td>{{ $key->jenis_penjualan_id }}</td>
                                         <td>
-                                            <a href="master-barang/{{ $key->id }}/edit"
+                                            <a href="/barang-penjualan/{{ $key->id }}/edit"
                                                 class="btn btn-outline-warning my-1 btn-sm">
                                                 <i data-feather="edit"></i>
                                             </a>
-                                            <form action="/master-barang/{{$key->id}}" method="POST"
+                                            <form action="/barang-penjualan/{{$key->id}}" method="POST"
                                                 class="display-non">
                                                 @csrf
                                                 @method('DELETE')
