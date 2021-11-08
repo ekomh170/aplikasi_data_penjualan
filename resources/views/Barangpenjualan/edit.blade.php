@@ -59,7 +59,8 @@ Form Data Penjualan
                                             <option value="{{ $jp->id }}" selected>{{ $jp->jenis_penjualan }}</option>
                                             @else
                                             <option value="{{ $jp->id }}">{{ $jp->jenis_penjualan }}
-                                            </option> @endif
+                                            </option>
+                                            @endif
                                             @endforeach
                                         </select>
                                     </div>

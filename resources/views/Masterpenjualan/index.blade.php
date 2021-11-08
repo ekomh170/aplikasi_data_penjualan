@@ -40,7 +40,7 @@ Menu Data Penjualan
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($mpenjualan as $item => $key)
+                                    @foreach ($tpenjualan as $item => $key)
                                     <tr>
                                         <th scope="row">{{ $item + 1 }}</th>
                                         <td>{{ $key->barang_penjualan->nama_barang }}</td>
@@ -50,11 +50,11 @@ Menu Data Penjualan
                                         <td>{{ $key->created_at }}</td>
                                         <td>{{ $key->updated_at }}</td>
                                         <td>
-                                            <a href="master-barang/{{ $key->id }}/edit"
+                                            <a href="master-penjualan/{{ $key->id }}/edit"
                                                 class="btn btn-outline-warning my-1 btn-sm">
                                                 <i data-feather="edit"></i>
                                             </a>
-                                            <form action="/master-barang/{{$key->id}}" method="POST"
+                                            <form action="/master-penjualan/{{$key->id}}" method="POST"
                                                 class="display-non">
                                                 @csrf
                                                 @method('DELETE')

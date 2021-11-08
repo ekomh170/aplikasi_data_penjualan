@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Tpenjualan;
 use App\Models\Bpenjualan;
-use App\Models\Jpenjualan;
 use RealRashid\SweetAlert\Facades\Alert;
 
 use Illuminate\Http\Request;
@@ -18,8 +17,8 @@ class MpenjualanController extends Controller
      */
     public function index()
     {
-        $mpenjualan = Tpenjualan::all();
-        return view('Masterpenjualan.index', compact('mpenjualan'));
+        $tpenjualan = Tpenjualan::all();
+        return view('Masterpenjualan.index', compact('tpenjualan'));
     }
 
     /**
@@ -29,8 +28,8 @@ class MpenjualanController extends Controller
      */
     public function create()
     {
-        $jenis_barang = Bpenjualan::all();
-        return view('Masterpenjualan.create', compact('jenis_barang'));
+        $barang_penjualan = Bpenjualan::all();
+        return view('Masterpenjualan.create', compact('barang_penjualan'));
     }
 
     /**
@@ -42,70 +41,74 @@ class MpenjualanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_barang' => 'required',
-            'jenis_barang_id' => 'required',
+            'stok' => 'required',
+            'jumlah_terjual' => 'required',
+            'nama_barang_id' => 'required',
         ]);
 
-        Bpenjualan::create([
-            "nama_barang" => $request["nama_barang"],
-            "jenis_barang_id" => $request["jenis_barang_id"],
+        Tpenjualan::create([
+            "stok" => $request["stok"],
+            "jumlah_terjual" => $request["jumlah_terjual"],
+            "nama_barang_id" => $request["nama_barang_id"],
         ]);
 
         Alert::success('Berhasil', 'Tambah Master Data Penjualan');
-        return redirect('/master-barang');
+        return redirect('/master-penjualan');
     }
 
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Bpenjualan  $Mpenjualan
+     * @param  \App\Models\Tpenjualan  $Tpenjualan
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $mpenjualan = Bpenjualan::find($id);
-        $jenis_barang = Bpenjualan::all();
-        return view('Masterpenjualan.edit', compact('mpenjualan', 'jenis_barang'));
+        $tpenjualan = Tpenjualan::find($id);
+        $barang_penjualan = Bpenjualan::all();
+        return view('Masterpenjualan.edit', compact('tpenjualan', 'barang_penjualan'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Mpenjualan  $Mpenjualan
+     * @param  \App\Models\Tpenjualan  $Tpenjualan
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
         $request->validate([
-            "nama_barang" => $request["nama_barang"],
-            "jenis_barang_id" => $request["jenis_barang_id"],
+            'stok' => 'required',
+            'jumlah_terjual' => 'required',
+            'nama_barang_id' => 'required',
         ]);
 
-        $mpenjualan = Bpenjualan::find($id);
+        $tpenjualan = Tpenjualan::find($id);
 
         $data_barang = [
-            "nama_barang" => $request["nama_barang"],
-            "jenis_barang_id" => $request["jenis_barang_id"],
+            "stok" => $request["stok"],
+            "jumlah_terjual" => $request["jumlah_terjual"],
+            "nama_barang_id" => $request["nama_barang_id"],
         ];
 
-        $mpenjualan->update($data_barang);
+        $tpenjualan->update($data_barang);
         Alert::success('Berhasil', 'Edit Master Data Penjualan');
-        return redirect('/master-barang');
+        return redirect('/master-penjualan');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Mpenjualan  $Mpenjualan
+     * @param  \App\Models\Tpenjualan  $Tpenjualan
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $mpenjualan = Bpenjualan::find($id);
-        $mpenjualan->delete();
+        $tpenjualan = Tpenjualan::find($id);
+        $tpenjualan->delete();
         Alert::success('Berhasil', 'Hapus Master Data Penjualan');
-        return redirect('/master-barang');
+        return redirect('/master-penjualan');
     }
 }

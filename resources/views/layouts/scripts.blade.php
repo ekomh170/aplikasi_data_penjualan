@@ -32,7 +32,7 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-      $("#jam").clock({"format":"24","calendar":"false"});
+      $("#jam").clock({"format":"24","calendar":"true"});
     });
 </script>
 
