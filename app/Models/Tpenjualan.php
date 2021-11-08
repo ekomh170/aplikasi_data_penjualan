@@ -10,8 +10,10 @@ class Tpenjualan extends Model
 {
     use HasFactory;
 
-    protected $table = 'transaksi_barang';
-    protected $fillable = ["stok", "jumlah_terjual", "created_at", "updated_at", "master_barang_id"];
+    protected $table = 'transaksi_penjualan';
+    protected $fillable = ["stok", "jumlah_terjual", "master_barang_id"];
+    public $timestamps = false;
+
 
     public function getCreatedAtAttribute()
     {

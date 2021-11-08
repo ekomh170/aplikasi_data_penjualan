@@ -6,12 +6,13 @@ use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Jpenjualan extends Model
+class Wtransakasi extends Model
 {
     use HasFactory;
 
-    protected $table = 'jenis_penjualan';
-    protected $fillable = ["jenis_penjualan", "created_at", "updated_at"];
+    protected $table = 'waktu_transaksi';
+    protected $fillable = ["created_at", "c", "nama_barang_id", "transaksi_penjualan_id"];
+    public $timestamps = false;
 
     public function getCreatedAtAttribute()
     {

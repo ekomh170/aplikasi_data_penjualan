@@ -30,7 +30,7 @@ Membuat Aplikasi Berbasis Web Data Penjualan Menggunakan Laravel 8, Yang Bertuju
 
 ## Alat Yang Digunakan Untuk Membuat Web :
 
-<b>A. Hardware :</b>
+<b>A. Hardware :</b><br>
 Laptop Aspire E1-472G. Speaksifikasi :
 
 -   Ram : 4GB DD3 L Memory
@@ -58,7 +58,6 @@ Laptop Aspire E1-472G. Speaksifikasi :
     -   Carbon Laravel Time
     -   Sweet Alert
     -   Datatables
-    -   TinyMCE
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 

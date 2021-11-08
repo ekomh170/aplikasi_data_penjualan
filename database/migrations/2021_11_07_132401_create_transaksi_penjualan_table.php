@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTransaksiBarangTable extends Migration
+class CreateTransaksiPenjualanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateTransaksiBarangTable extends Migration
      */
     public function up()
     {
-        Schema::create('transaksi_barang', function (Blueprint $table) {
+        Schema::create('transaksi_penjualan', function (Blueprint $table) {
             $table->id();
             $table->integer('stok');
             $table->integer('jumlah_terjual');
-            $table->timestamps();
             $table->unsignedBigInteger('nama_barang_id');
-            $table->foreign('nama_barang_id')->references('id')->on('master_barang');
+            $table->foreign('nama_barang_id')->references('id')->on('master_penjualan');
         });
     }
 
@@ -30,6 +29,6 @@ class CreateTransaksiBarangTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaksi_barang');
+        Schema::dropIfExists('transaksi_penjualan');
     }
 }
