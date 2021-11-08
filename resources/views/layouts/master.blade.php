@@ -3,10 +3,12 @@
 
 <head>
     @include('layouts.head')
+
     <title>@yield('judul') | @yield('judul_sub')</title>
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <div id="db-wrapper">
         <!-- navbar vertical -->
         @include('layouts.navbar-vertical')

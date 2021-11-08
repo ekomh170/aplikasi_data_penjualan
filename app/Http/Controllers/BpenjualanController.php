@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Jpenjualan;
 use App\Models\Bpenjualan;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class BpenjualanController extends Controller
 {
@@ -48,6 +49,7 @@ class BpenjualanController extends Controller
             "jenis_penjualan_id" => $request["jenis_penjualan_id"],
         ]);
 
+        Alert::success('Berhasil', 'Tambah Data Barang Penjualan');
         return redirect('/barang-penjualan');
     }
 
@@ -86,6 +88,7 @@ class BpenjualanController extends Controller
         ];
 
         $Bpenjualan->update($data_barang);
+        Alert::success('Berhasil', 'Edit Data Barang Penjualan');
         return redirect('/barang-penjualan');
     }
 
@@ -99,6 +102,7 @@ class BpenjualanController extends Controller
     {
         $Bpenjualan = Bpenjualan::find($id);
         $Bpenjualan->delete();
+        Alert::success('Berhasil', 'Menghapus Data Barang Penjualan');
         return redirect('/barang-penjualan');
     }
 }

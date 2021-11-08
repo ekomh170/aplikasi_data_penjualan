@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Tpenjualan;
 use App\Models\Bpenjualan;
 use App\Models\Jpenjualan;
+use RealRashid\SweetAlert\Facades\Alert;
+
 use Illuminate\Http\Request;
 
 class MpenjualanController extends Controller
@@ -49,6 +51,7 @@ class MpenjualanController extends Controller
             "jenis_barang_id" => $request["jenis_barang_id"],
         ]);
 
+        Alert::success('Berhasil', 'Tambah Master Data Penjualan');
         return redirect('/master-barang');
     }
 
@@ -88,6 +91,7 @@ class MpenjualanController extends Controller
         ];
 
         $mpenjualan->update($data_barang);
+        Alert::success('Berhasil', 'Edit Master Data Penjualan');
         return redirect('/master-barang');
     }
 
@@ -101,6 +105,7 @@ class MpenjualanController extends Controller
     {
         $mpenjualan = Bpenjualan::find($id);
         $mpenjualan->delete();
+        Alert::success('Berhasil', 'Hapus Master Data Penjualan');
         return redirect('/master-barang');
     }
 }

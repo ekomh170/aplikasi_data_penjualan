@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Jpenjualan;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 
 class JpenjualanController extends Controller
@@ -44,6 +45,7 @@ class JpenjualanController extends Controller
             "jenis_penjualan" => $request["jenis_penjualan"],
         ]);
 
+        Alert::success('Berhasil', 'Tambah Data Jenis Penjualan');
         return redirect('/jenis-penjualan');
     }
 
@@ -79,6 +81,7 @@ class JpenjualanController extends Controller
         ];
 
         $jpenjualan->update($data_barang);
+        Alert::success('Berhasil', 'Edit Data Jenis Penjualan');
         return redirect('/jenis-penjualan');
     }
 
@@ -92,6 +95,7 @@ class JpenjualanController extends Controller
     {
         $jpenjualan = Jpenjualan::find($id);
         $jpenjualan->delete();
+        Alert::success('Berhasil', 'Hapus Data Jenis Penjualan');
         return redirect('/jenis-penjualan');
     }
 }
