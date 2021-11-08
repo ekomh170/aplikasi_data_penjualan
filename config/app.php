@@ -136,6 +136,10 @@ return [
 
     'providers' => [
 
+        // Swall
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+        // Swall
+
         /*
          * Laravel Framework Service Providers...
          */
@@ -189,6 +193,9 @@ return [
     */
 
     'aliases' => [
+        // Swall
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+        // Swall
 
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,

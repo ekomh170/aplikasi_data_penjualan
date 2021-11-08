@@ -12,7 +12,7 @@ Menu Data Penjualan
     <div class="row mb-6">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div id="examples" class="mb-4">
-                <h2>Transaksi Data Penjualan</h2>
+                <h2>Log Transaksi Data Penjualan</h2>
             </div>
             <div class="card">
                 <ul class="pt-2 pb-2 pl-2 nav nav-line-bottom" id="pills-tab-table" role="tablist">
@@ -31,18 +31,21 @@ Menu Data Penjualan
                                         <th scope="col">Stok</th>
                                         <th scope="col">Jumlah Terjual</th>
                                         <th scope="col">Jenis Barang</th>
+                                        <th scope="col">Dibuat</th>
+                                        <th scope="col">Diperbarui</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($tpenjualan as $item => $key)
+                                    @foreach ($wtransaksi as $item => $key)
                                     <tr>
                                         <th scope="row">{{ $item + 1 }}</th>
-                                        <td>{{ $key->nama_barang_id }}</td>
+                                        <td>{{ $key->barang_penjualan->nama_barang }}</td>
                                         <td>{{ $key->stok }}</td>
                                         <td>{{ $key->jumlah_terjual }}</td>
-                                        <td></td>
-                                        {{-- <td>{{ $key->nama_barang_id->jenis_barang_id }}</td> --}}
+                                        <td>{{ $key->barang_penjualan->jenis_penjualan->jenis_penjualan }}</td>
+                                        <td>{{ $key->created_at }}</td>
+                                        <td>{{ $key->updated_at }}</td>
                                         <td>
                                             <a href="master-barang/{{ $key->id }}/edit"
                                                 class="btn btn-outline-warning my-1 btn-sm">

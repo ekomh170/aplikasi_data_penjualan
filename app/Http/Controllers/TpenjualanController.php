@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tpenjualan;
+use App\Models\Wtransakasi;
 use Illuminate\Http\Request;
 
 class TpenjualanController extends Controller
@@ -14,7 +15,7 @@ class TpenjualanController extends Controller
      */
     public function index()
     {
-        $tpenjualan = Tpenjualan::all();
-        return view('Transaksipenjualan.index', compact('tpenjualan'));
+        $wtransaksi = Wtransakasi::all();
+        return view('Transaksipenjualan.index', compact('wtransaksi'));
     }
 }

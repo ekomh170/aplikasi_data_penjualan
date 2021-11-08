@@ -17,6 +17,7 @@ class CreateTransaksiPenjualanTable extends Migration
             $table->id();
             $table->integer('stok');
             $table->integer('jumlah_terjual');
+            $table->timestamps();
             $table->unsignedBigInteger('nama_barang_id');
             $table->foreign('nama_barang_id')->references('id')->on('master_penjualan');
         });

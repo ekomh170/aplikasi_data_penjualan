@@ -34,6 +34,8 @@ Menu Data Penjualan
                                         <th scope="col">Stok</th>
                                         <th scope="col">Jumlah Terjual</th>
                                         <th scope="col">Jenis Barang</th>
+                                        <th scope="col">Dibuat</th>
+                                        <th scope="col">Diperbarui</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
@@ -41,10 +43,12 @@ Menu Data Penjualan
                                     @foreach ($mpenjualan as $item => $key)
                                     <tr>
                                         <th scope="row">{{ $item + 1 }}</th>
-                                        <td>{{ $key->nama_barang }}</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>{{ $key->jenis_penjualan_id }}</td>
+                                        <td>{{ $key->barang_penjualan->nama_barang }}</td>
+                                        <td>{{ $key->stok }}</td>
+                                        <td>{{ $key->jumlah_terjual }}</td>
+                                        <td>{{ $key->barang_penjualan->jenis_penjualan->jenis_penjualan }}</td>
+                                        <td>{{ $key->created_at }}</td>
+                                        <td>{{ $key->updated_at }}</td>
                                         <td>
                                             <a href="master-barang/{{ $key->id }}/edit"
                                                 class="btn btn-outline-warning my-1 btn-sm">

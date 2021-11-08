@@ -14,6 +14,16 @@ class Wtransakasi extends Model
     protected $fillable = ["created_at", "c", "nama_barang_id", "transaksi_penjualan_id"];
     public $timestamps = false;
 
+    public function barang_penjualan()
+    {
+        return $this->belongsTo('App\Models\Bpenjualan', 'nama_barang_id');
+    }
+
+    public function transaksi_penjualan()
+    {
+        return $this->belongsTo('App\Models\Tpenjualan', 'transaksi_penjualan_id');
+    }
+
     public function getCreatedAtAttribute()
     {
         return Carbon::parse($this->attributes['created_at'])->translatedFormat('l, d F Y H:i:s');

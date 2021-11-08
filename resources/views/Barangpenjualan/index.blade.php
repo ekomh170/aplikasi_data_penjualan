@@ -40,7 +40,7 @@ Menu Data Penjualan
                                     <tr>
                                         <th scope="row">{{ $item + 1 }}</th>
                                         <td>{{ $key->nama_barang }}</td>
-                                        <td>{{ $key->jenis_penjualan_id }}</td>
+                                        <td>{{ $key->jenis_penjualan->jenis_penjualan }}</td>
                                         <td>
                                             <a href="/barang-penjualan/{{ $key->id }}/edit"
                                                 class="btn btn-outline-warning my-1 btn-sm">
