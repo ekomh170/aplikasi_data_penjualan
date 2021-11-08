@@ -37,14 +37,14 @@ class JpenjualanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'jenis_barang' => 'required',
+            'jenis_penjualan' => 'required',
         ]);
 
         Jpenjualan::create([
-            "jenis_barang" => $request["jenis_barang"],
+            "jenis_penjualan" => $request["jenis_penjualan"],
         ]);
 
-        return redirect('/jenis-barang');
+        return redirect('/jenis-penjualan');
     }
 
     /**
@@ -53,7 +53,7 @@ class JpenjualanController extends Controller
      * @param  \App\Models\Jpenjualan  $Jpenjualan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Jpenjualan $id)
+    public function edit($id)
     {
         $jpenjualan = Jpenjualan::find($id);
         return view('Jenispenjualan.edit', compact('jpenjualan'));
@@ -66,20 +66,20 @@ class JpenjualanController extends Controller
      * @param  \App\Models\Jpenjualan  $Jpenjualan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Jpenjualan $id)
+    public function update(Request $request, $id)
     {
         $request->validate([
-            "jenis_barang" => $request["jenis_barang"],
+            'jenis_penjualan' => 'required',
         ]);
 
         $jpenjualan = Jpenjualan::find($id);
 
         $data_barang = [
-            "jenis_barang" => $request["jenis_barang"],
+            "jenis_penjualan" => $request["jenis_penjualan"],
         ];
 
         $jpenjualan->update($data_barang);
-        return redirect('/jenis-barang');
+        return redirect('/jenis-penjualan');
     }
 
     /**
@@ -88,10 +88,10 @@ class JpenjualanController extends Controller
      * @param  \App\Models\Jpenjualan  $Jpenjualan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Jpenjualan $id)
+    public function destroy($id)
     {
         $jpenjualan = Jpenjualan::find($id);
         $jpenjualan->delete();
-        return redirect('/jenis-barang');
+        return redirect('/jenis-penjualan');
     }
 }

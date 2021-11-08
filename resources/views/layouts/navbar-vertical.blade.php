@@ -29,6 +29,15 @@
 
             <li class="nav-item">
                 <a class="nav-link @@if (context.page === 'layouts') { active }"
+                    href="{{ route('jenis-penjualan.index') }}">
+                    <i data-feather="database" class="nav-icon icon-xs me-2">
+                    </i>
+                    Barang Data Penjualan
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link @@if (context.page === 'layouts') { active }"
                     href="{{ route('master-penjualan.index') }}">
                     <i data-feather="database" class="nav-icon icon-xs me-2">
                     </i>

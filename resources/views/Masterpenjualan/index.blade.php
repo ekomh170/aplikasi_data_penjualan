@@ -44,7 +44,7 @@ Menu Data Penjualan
                                         <td>{{ $key->nama_barang }}</td>
                                         <td></td>
                                         <td></td>
-                                        <td>{{ $key->jenis_barang_id }}</td>
+                                        <td>{{ $key->jenis_penjualan_id }}</td>
                                         <td>
                                             <a href="master-barang/{{ $key->id }}/edit"
                                                 class="btn btn-outline-warning my-1 btn-sm">

@@ -8,6 +8,7 @@
                 <input type="search" class="form-control" placeholder="Search" />
             </form>
         </div>
+        <div id="jam"></div>
         <!--Navbar nav -->
         <ul class="navbar-nav navbar-right-wrap ms-auto d-flex nav-top-wrap">
             <li class="dropdown stopevent">

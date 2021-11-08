@@ -31,6 +31,8 @@ Menu Data Penjualan
                                     <tr>
                                         <th scope="col">No</th>
                                         <th scope="col">Jenis Barang</th>
+                                        <th scope="col">Dibuat</th>
+                                        <th scope="col">Diperbarui</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
@@ -38,17 +40,19 @@ Menu Data Penjualan
                                     @foreach ($jpenjualan as $item => $key)
                                     <tr>
                                         <th scope="row">{{ $item + 1 }}</th>
-                                        <td>{{ $key->jenis_barang }}</td>
+                                        <td>{{ $key->jenis_penjualan }}</td>
+                                        <td>{{ $key->created_at }}</td>
+                                        <td>{{ $key->updated_at }}</td>
                                         <td>
-                                            <a href="master-barang/{{ $key->id }}/edit"
+                                            <a href="jenis-penjualan/{{ $key->id }}/edit"
                                                 class="btn btn-outline-warning my-1 btn-sm">
                                                 <i data-feather="edit"></i>
                                             </a>
-                                            <form action="/master-barang/{{$key->id}}" method="POST"
+                                            <form action="/jenis-penjualan/{{ $key->id }}" method="POST"
                                                 class="display-non">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type=" submit" class="btn btn-outline-danger my-1 btn-sm"
+                                                <button type="submit" class="btn btn-outline-danger my-1 btn-sm"
                                                     value="Delete">
                                                     <i data-feather="trash"></i>
                                                 </button>

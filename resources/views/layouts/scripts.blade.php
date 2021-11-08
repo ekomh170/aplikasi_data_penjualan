@@ -28,6 +28,13 @@
 <script src="{{ asset('/assets') }}/js/feather.js"></script>
 <script src="{{ asset('/assets') }}/js/copyButton.js"></script>
 <script src="{{ asset('/assets') }}/js/sidebarMenu.js"></script>
+<script src="{{ asset('/assets') }}/js/jqClock.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      $("#jam").clock({"format":"24","calendar":"false"});
+    });
+</script>
 
 
 <!-- endbuild -->

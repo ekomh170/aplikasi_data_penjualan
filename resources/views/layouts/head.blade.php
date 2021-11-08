@@ -24,5 +24,6 @@
 
 
 <!-- Theme CSS -->
+<link rel="stylesheet" href="{{ asset('/assets') }}/css/jqClock.css">
 <link rel="stylesheet" href="{{ asset('/assets') }}/css/theme.css">
 <!-- endbuild -->
