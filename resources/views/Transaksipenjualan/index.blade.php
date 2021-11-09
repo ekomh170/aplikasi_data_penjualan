@@ -25,7 +25,7 @@ Menu Data Penjualan
                     <div class="col-6 me-4">
                         <form action="/transaksi-penjualan" class="d-flex align-items-end">
                             <input type="text" class="form-control" placeholder="Cari Data" name="search" />
-                            <div class="ms-2 me-2">
+                            <div class="ms-2 me-2" value="{{ request('search') }}">
                                 <button type="submit" class="btn btn-dark">Cari</button>
                             </div>
                         </form>

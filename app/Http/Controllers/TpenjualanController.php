@@ -15,14 +15,9 @@ class TpenjualanController extends Controller
      */
     public function index()
     {
-        $transaksi_penjualan = Wtransakasi::latest();
-
-        if (request('search')) {
-            $transaksi_penjualan->where('nama_barang', 'like', '%' . request('search') . '%');
-        }
-
-        $wtransaksi = $transaksi_penjualan->get();
-        return view('Transaksipenjualan.index', compact('wtransaksi'));
+        $active = "transaksi_penjualan";
+        $wtransaksi = Wtransakasi::latest()->filter()->get();
+        return view('Transaksipenjualan.index', compact('wtransaksi', 'active'));
     }
 
     /**

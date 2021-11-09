@@ -13,6 +13,12 @@
         <!-- navbar vertical -->
         @include('layouts.navbar-vertical')
         <!-- Page content -->
+        <div class="preloader">
+            <div class="loading">
+                <img src="{{ asset('assets/images/preloader/preloader.gif') }}" width="80">
+                <div class="fw-bold text-dark">Harap Tunggu</div>
+            </div>
+        </div>
         <div id="page-content">
             @include('layouts.header')
             <!-- Container fluid -->

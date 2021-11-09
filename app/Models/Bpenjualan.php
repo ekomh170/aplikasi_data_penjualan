@@ -13,6 +13,13 @@ class Bpenjualan extends Model
     protected $fillable = ["nama_barang", "jenis_penjualan_id"];
     public $timestamps = false;
 
+    public function scopeFilter($query)
+    {
+        if (request('search')) {
+            return $query->where('nama_barang', 'like', '%' . request('search') . '%');
+        }
+    }
+
     public function jenis_penjualan()
     {
         return $this->belongsTo('App\Models\Jpenjualan');

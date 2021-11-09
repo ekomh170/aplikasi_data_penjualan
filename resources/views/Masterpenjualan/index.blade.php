@@ -23,7 +23,7 @@ Menu Data Penjualan
                         </a>
                     </div>
                     <div class="col-6 me-4">
-                        <form action="/jenis-penjualan" class="d-flex align-items-end">
+                        <form action="/master-penjualan" class="d-flex align-items-end">
                             <input type="text" class="form-control" placeholder="Cari Data" name="search"
                                 value="{{ request('search') }}" />
                             <div class="ms-2 me-2">

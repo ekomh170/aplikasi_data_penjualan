@@ -8,7 +8,7 @@
         <!-- Navbar nav -->
         <ul class="navbar-nav flex-column" id="sideNavbar">
             <li class="nav-item">
-                <a class="nav-link has-arrow @@if (context.page ===  'dashboard') { active }" href="{{ url('/') }}">
+                <a class="nav-link has-arrow {{ ($active === "dashboard") ? 'active' : '' }}" href="{{ url('/') }}">
                     <i data-feather="home" class="nav-icon icon-xs me-2"></i> Dashboard
                 </a>
             </li>
@@ -19,7 +19,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link @@if (context.page === 'layouts') { active }"
+                <a class="nav-link {{ ($active === "jenis_penjualan") ? 'active' : '' }}"
                     href="{{ route('jenis-penjualan.index') }}">
                     <i data-feather="database" class="nav-icon icon-xs me-2">
                     </i>
@@ -28,7 +28,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link @@if (context.page === 'layouts') { active }"
+                <a class="nav-link {{ ($active === "barang_penjualan") ? 'active' : '' }}"
                     href="{{ route('barang-penjualan.index') }}">
                     <i data-feather="database" class="nav-icon icon-xs me-2">
                     </i>
@@ -37,7 +37,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link @@if (context.page === 'layouts') { active }"
+                <a class="nav-link {{ ($active === "master_penjualan") ? 'active' : '' }}"
                     href="{{ route('master-penjualan.index') }}">
                     <i data-feather="database" class="nav-icon icon-xs me-2">
                     </i>
@@ -46,7 +46,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link @@if (context.page === 'layouts') { active }"
+                <a class="nav-link {{ ($active === "transaksi_penjualan") ? 'active' : '' }}"
                     href="{{ route('transaksi-penjualan.index') }}">
                     <i data-feather="database" class="nav-icon icon-xs me-2">
                     </i>
@@ -55,7 +55,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link @@if (context.page === 'layouts') { active }"
+                <a class="nav-link {{ ($active === "perbandingan_penjualan") ? 'active' : '' }}"
                     href="{{ route('perbandingan-penjualan.index') }}">
                     <i data-feather="database" class="nav-icon icon-xs me-2">
                     </i>
@@ -68,7 +68,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link @@if (context.page === 'layouts') { active }" href="{{ url('about-me') }}">
+                <a class="nav-link {{ ($active === "about_me") ? 'active' : '' }}" href="{{ url('about-me') }}">
                     <i data-feather="user" class="nav-icon icon-xs me-2">
                     </i>
                     Pembuat Website
@@ -76,7 +76,8 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link @@if (context.page === 'layouts') { active }" href="{{ url('dokumentasi-web') }}">
+                <a class="nav-link {{ ($active === "dokumentasi_web") ? 'active' : '' }}"
+                    href="{{ url('dokumentasi-web') }}">
                     <i data-feather="book" class=" nav-icon icon-xs me-2">
                     </i>
                     Dokumentasi Singkat

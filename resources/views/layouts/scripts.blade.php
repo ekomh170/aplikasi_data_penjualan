@@ -30,6 +30,12 @@
 <script src="{{ asset('/assets') }}/js/sidebarMenu.js"></script>
 <script src="{{ asset('/assets') }}/js/jqClock.min.js"></script>
 
+<script>
+    $(document).ready(function(){
+$(".preloader").fadeOut();
+})
+</script>
+
 <script type="text/javascript">
     $(document).ready(function(){
       $("#jam").clock({"format":"24","calendar":"true"});

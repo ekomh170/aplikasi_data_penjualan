@@ -13,7 +13,8 @@ class PerbandinganpenjualanController extends Controller
      */
     public function index()
     {
-        return view('Perbandinganjenispenjualan.index');
+        $active = "perbandingan_penjualan";
+        return view('Perbandinganjenispenjualan.index', compact('active'));
     }
 
     /**

@@ -29,12 +29,14 @@ Route::resource('/', DashboardController::class)->only(['index']);
 Route::get('/transaksi-penjualan/reset', [TpenjualanController::class, 'reset'])->name('transaksi-penjualan.reset');
 // Menu Penjualan (Utama)
 
-
 // Menu Tambahan
 Route::get('/about-me', function () {
-    return view('Menutambahan.about');
+    $active = "about_me";
+    return view('Menutambahan.about', compact('active'));
 });
+
 Route::get('/dokumentasi-web', function () {
-    return view('Menutambahan.dokumentasi');
+    $active = "dokumentasi_web";
+    return view('Menutambahan.dokumentasi', compact('active'));
 });
 // Menu Tambahan

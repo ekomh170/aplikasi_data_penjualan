@@ -18,6 +18,7 @@ class DashboardController extends Controller
         $bpenjualancount = Bpenjualan::count();
         $mpenjualancount = Tpenjualan::count();
         $wtransaksicount = Wtransakasi::count();
-        return view('Dashboard.index', compact('wtransaksi', 'jpenjualancount', 'bpenjualancount', 'mpenjualancount', 'wtransaksicount'));
+        $active = 'dashboard';
+        return view('Dashboard.index', compact('wtransaksi', 'jpenjualancount', 'bpenjualancount', 'mpenjualancount', 'wtransaksicount', 'active'));
     }
 }
