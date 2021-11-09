@@ -54,11 +54,11 @@ Menu Data Penjualan
                                     @foreach ($wtransaksi as $item => $key)
                                     <tr>
                                         <th scope="row">{{ $item + 1 }}</th>
-                                        <td>{{ $key->barang_penjualan->nama_barang }}</td>
+                                        <td>{{ $key->nama_barang }}</td>
                                         <td>{{ $key->stok }}</td>
                                         <td>{{ $key->jumlah_terjual }}</td>
                                         <td>{{ $key->stok - $key->jumlah_terjual }}</td>
-                                        <td>{{ $key->barang_penjualan->jenis_penjualan->jenis_penjualan }}</td>
+                                        <td>{{ $key->jenis_penjualan }}</td>
                                         <td>{{ $key->created_at }}</td>
                                         <td>{{ $key->updated_at }}</td>
                                     </tr>

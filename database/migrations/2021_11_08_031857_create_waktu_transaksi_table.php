@@ -15,11 +15,11 @@ class CreateWaktuTransaksiTable extends Migration
     {
         Schema::create('waktu_transaksi', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_barang');
+            $table->string('jenis_penjualan');
             $table->integer('stok');
             $table->integer('jumlah_terjual');
             $table->timestamps();
-            $table->unsignedBigInteger('nama_barang_id');
-            $table->foreign('nama_barang_id')->references('id')->on('master_penjualan');
         });
     }
 

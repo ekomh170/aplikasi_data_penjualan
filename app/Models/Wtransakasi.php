@@ -11,17 +11,7 @@ class Wtransakasi extends Model
     use HasFactory;
 
     protected $table = 'waktu_transaksi';
-    protected $fillable = ["created_at", "stok", "jumlah_terjual", "nama_barang_id"];
-
-    public function barang_penjualan()
-    {
-        return $this->belongsTo('App\Models\Bpenjualan', 'nama_barang_id');
-    }
-
-    public function transaksi_penjualan()
-    {
-        return $this->belongsTo('App\Models\Tpenjualan', 'transaksi_penjualan_id');
-    }
+    protected $fillable = ["nama_barang", "jenis_penjualan", "stok", "jumlah_terjual", "created_at", "updated_at"];
 
     public function getCreatedAtAttribute()
     {

@@ -16,9 +16,4 @@ class Tpenjualan extends Model
     {
         return $this->belongsTo('App\Models\Bpenjualan', 'nama_barang_id');
     }
-
-    public function waktu_transaksi()
-    {
-        return $this->hasMany('App\Models\Wpenjualan');
-    }
 }

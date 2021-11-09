@@ -103,57 +103,68 @@ class DatabaseSeeder extends Seeder
         Wtransakasi::create([
             'stok' => '100',
             'jumlah_terjual' => '10',
-            'nama_barang_id' => '1',
+            'nama_barang' => 'Kopi',
             'created_at' => date('2021-1-05'),
             'updated_at' => date('2021-1-05'),
+            'jenis_penjualan' => 'Konsumsi',
         ]);
 
         Wtransakasi::create([
             'stok' => '100',
             'jumlah_terjual' => '19',
-            'nama_barang_id' => '2',
+            'nama_barang' => 'Pasta Gigi',
             'created_at' => date('2021-5-05'),
             'updated_at' => date('2021-5-05'),
+            'jenis_penjualan' => 'Pembersih',
+
         ]);
 
         Wtransakasi::create([
             'stok' => '90',
             'jumlah_terjual' => '15',
-            'nama_barang_id' => '1',
+            'nama_barang' => 'Kopi',
             'created_at' => date('2021-10-05'),
             'updated_at' => date('2021-10-05'),
+            'jenis_penjualan' => 'Konsumsi',
+
         ]);
 
         Wtransakasi::create([
             'stok' => '100',
             'jumlah_terjual' => '20',
-            'nama_barang_id' => '3',
+            'nama_barang' => 'Sabun Mandi',
             'created_at' => date('2021-11-05'),
             'updated_at' => date('2021-11-05'),
+            'jenis_penjualan' => 'Pembersih',
         ]);
 
         Wtransakasi::create([
             'stok' => '100',
             'jumlah_terjual' => '30',
-            'nama_barang_id' => '4',
+            'nama_barang' => 'Sampo',
             'created_at' => date('2021-11-05'),
             'updated_at' => date('2021-11-05'),
+            'jenis_penjualan' => 'Pembersih',
+
         ]);
 
         Wtransakasi::create([
             'stok' => '100',
             'jumlah_terjual' => '25',
-            'nama_barang_id' => '5',
+            'nama_barang' => 'Teh',
             'created_at' => date('2021-12-05'),
             'updated_at' => date('2021-12-05'),
+            'jenis_penjualan' => 'Konsumsi',
+
         ]);
 
         Wtransakasi::create([
             'stok' => '81',
             'jumlah_terjual' => '5',
-            'nama_barang_id' => '2',
+            'nama_barang' => 'Pasta Gigi',
             'created_at' => date('2021-12-05'),
             'updated_at' => date('2021-12-05'),
+            'jenis_penjualan' => 'Pembersih',
         ]);
         //Transaksi
     }

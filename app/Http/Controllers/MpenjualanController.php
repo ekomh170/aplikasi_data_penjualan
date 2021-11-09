@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Tpenjualan;
 use App\Models\Bpenjualan;
+use App\Models\Jpenjualan;
+use App\Models\Tpenjualan;
 use App\Models\Wtransakasi;
-use RealRashid\SweetAlert\Facades\Alert;
 
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class MpenjualanController extends Controller
 {
@@ -59,10 +60,14 @@ class MpenjualanController extends Controller
             "nama_barang_id" => $request["nama_barang_id"],
         ]);
 
+        $bpenjualan = Bpenjualan::find($request["nama_barang_id"]);
+        $jpenjualan = Jpenjualan::find($bpenjualan['jenis_penjualan_id']);
+
         Wtransakasi::create([
+            "nama_barang" => $bpenjualan["nama_barang"],
+            "jenis_penjualan" => $jpenjualan['jenis_penjualan'],
             "stok" => $request["stok"],
             "jumlah_terjual" => $request["jumlah_terjual"],
-            "nama_barang_id" => $request["nama_barang_id"],
         ]);
 
         Alert::success('Berhasil', 'Tambah Master Data Penjualan');
@@ -106,13 +111,19 @@ class MpenjualanController extends Controller
             "nama_barang_id" => $request["nama_barang_id"],
         ];
 
+
+        $bpenjualan = Bpenjualan::find($request["nama_barang_id"]);
+        $jpenjualan = Jpenjualan::find($bpenjualan['jenis_penjualan_id']);
+
         Wtransakasi::create([
+            "nama_barang" => $bpenjualan["nama_barang"],
+            "jenis_penjualan" => $jpenjualan['jenis_penjualan'],
             "stok" => $request["stok"],
             "jumlah_terjual" => $request["jumlah_terjual"],
-            "nama_barang_id" => $request["nama_barang_id"],
         ]);
 
         $tpenjualan->update($data_barang);
+
         Alert::success('Berhasil', 'Edit Master Data Penjualan');
         return redirect('/master-penjualan');
     }

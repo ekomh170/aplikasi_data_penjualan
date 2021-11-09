@@ -22,9 +22,4 @@ class Bpenjualan extends Model
     {
         return $this->hasMany('App\Models\Tpenjualan');
     }
-
-    public function waktu_transaksi()
-    {
-        return $this->hasMany('App\Models\Wpenjualan');
-    }
 }
