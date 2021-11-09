@@ -179,7 +179,7 @@ Dashboard
                 </div>
                 <!-- card footer  -->
                 <div class="card-footer bg-white text-center">
-                    <a href="{{ route('transaksi-penjualan.index') }}">View All Log Transaksi</a>
+                    <a class="text-dark" href="{{ route('transaksi-penjualan.index') }}">Lihat Semua Log Transaksi</a>
                 </div>
             </div>
         </div>

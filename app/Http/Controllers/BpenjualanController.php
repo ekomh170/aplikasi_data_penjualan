@@ -16,7 +16,7 @@ class BpenjualanController extends Controller
      */
     public function index()
     {
-        $barang_penjualan = Bpenjualan::latest();
+        $barang_penjualan = Bpenjualan::orderBy('nama_barang', 'asc');
 
         if (request('search')) {
             $barang_penjualan->where('nama_barang', 'like', '%' . request('search') . '%');

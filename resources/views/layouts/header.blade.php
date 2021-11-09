@@ -8,7 +8,6 @@
                 <input type="search" class="form-control" placeholder="Search" />
             </form>
         </div>
-        <div id="jam"></div>
         <!--Navbar nav -->
         <ul class="navbar-nav navbar-right-wrap ms-auto d-flex nav-top-wrap">
             <li class="dropdown stopevent">
@@ -111,7 +110,7 @@
 
                         <div class="lh-1 ">
                             <h5 class="mb-1">Eko Muchamad Haryono</h5>
-                            <a href="#" class="text-inherit fs-6">View my profile</a>
+                            <a href="{{ url('about-me') }}" class="text-inherit fs-6">View my profile</a>
                         </div>
                         <div class=" dropdown-divider mt-3 mb-2"></div>
                     </div>

@@ -13,7 +13,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $wtransaksi = Wtransakasi::all();
+        $wtransaksi = Wtransakasi::offset(1)->limit(5)->latest()->get();
         $jpenjualancount = Jpenjualan::count();
         $bpenjualancount = Bpenjualan::count();
         $mpenjualancount = Tpenjualan::count();

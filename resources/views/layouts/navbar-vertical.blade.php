@@ -63,6 +63,26 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <div class="navbar-heading">Menu Tambahan</div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link @@if (context.page === 'layouts') { active }" href="{{ url('about-me') }}">
+                    <i data-feather="user" class="nav-icon icon-xs me-2">
+                    </i>
+                    Pembuat Website
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link @@if (context.page === 'layouts') { active }" href="{{ url('dokumentasi-web') }}">
+                    <i data-feather="book" class=" nav-icon icon-xs me-2">
+                    </i>
+                    Dokumentasi Singkat
+                </a>
+            </li>
+
             <!-- Nav item -->
             <li class="nav-item">
                 <div class="navbar-heading">Documentation</div>
@@ -103,11 +123,6 @@
                     </i> Dokumentasi
                 </a>
             </li>
-
-
-
-
         </ul>
-
     </div>
 </nav>

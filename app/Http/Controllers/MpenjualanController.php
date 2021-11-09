@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tpenjualan;
 use App\Models\Bpenjualan;
+use App\Models\Wtransakasi;
 use RealRashid\SweetAlert\Facades\Alert;
 
 use Illuminate\Http\Request;
@@ -58,6 +59,12 @@ class MpenjualanController extends Controller
             "nama_barang_id" => $request["nama_barang_id"],
         ]);
 
+        Wtransakasi::create([
+            "stok" => $request["stok"],
+            "jumlah_terjual" => $request["jumlah_terjual"],
+            "nama_barang_id" => $request["nama_barang_id"],
+        ]);
+
         Alert::success('Berhasil', 'Tambah Master Data Penjualan');
         return redirect('/master-penjualan');
     }
@@ -98,6 +105,12 @@ class MpenjualanController extends Controller
             "jumlah_terjual" => $request["jumlah_terjual"],
             "nama_barang_id" => $request["nama_barang_id"],
         ];
+
+        Wtransakasi::create([
+            "stok" => $request["stok"],
+            "jumlah_terjual" => $request["jumlah_terjual"],
+            "nama_barang_id" => $request["nama_barang_id"],
+        ]);
 
         $tpenjualan->update($data_barang);
         Alert::success('Berhasil', 'Edit Master Data Penjualan');

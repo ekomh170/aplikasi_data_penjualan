@@ -25,6 +25,21 @@ Form Data Penjualan
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <!-- Card -->
                     <div class="card">
+                        <div class="d-flex justify-content-center mt-3 mb-3 ms-3 me-3">
+                            <div class="col-4 ms-4">
+                                <a href="{{ route('jenis-penjualan.create') }}"
+                                    class="m-2 btn btn-outline-success my-1 btn-sm">
+                                    <i data-feather="plus"></i> Tambah Data Jenis Penjualan
+                                </a>
+                            </div>
+                            <div class="col-4 me-4">
+                                <a href="{{ route('master-penjualan.create') }}"
+                                    class="m-2 btn btn-outline-success my-1 btn-sm">
+                                    <i data-feather="plus"></i> Tambah Data Master Penjualan
+                                </a>
+                            </div>
+                        </div>
+                        <hr>
                         <!-- Tab content -->
                         <div class="tab-content p-4" id="pills-tabContent-basic-forms">
                             <div class="tab-pane tab-example-design fade show active" id="pills-basic-forms-design"
