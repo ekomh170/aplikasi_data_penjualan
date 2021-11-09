@@ -16,7 +16,7 @@ Menu Tambahan
             </div>
             <div class="card">
                 <div class="container-fluid text-dark">
-                    <div class="h3 text-center" class="fw-bold">Aplikasi Data Penjualan</div>
+                    <div class="h3 text-center mt-4 mb-4" class="fw-bold">Aplikasi Data Penjualan</div>
                     <div class="fw-bold">Penjelasan :</div>
                     <div class="mb-4">Aplikasi Berbasis Web Data Penjualan dengan Menggunakan Laravel 8, Yang Bertujuan
                         Untuk Presentasi Kepada Tester. Aplikasi Berbasis Web Data Penjualan dengan Laravel 8 adalah

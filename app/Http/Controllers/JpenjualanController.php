@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Jpenjualan;
+use App\Models\Tpenjualan;
+use App\Models\Bpenjualan;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 
@@ -99,8 +101,18 @@ class JpenjualanController extends Controller
      */
     public function destroy($id)
     {
-        $jpenjualan = Jpenjualan::find($id);
-        $jpenjualan->delete();
+        // Transaksi Penjualan
+        Tpenjualan::where('jenis_penjualan_id', $id)
+            ->join('barang_penjualan', 'barang_penjualan.id', '=', 'transaksi_penjualan.nama_barang_id')
+            ->delete();
+        // Transaksi Penjualan
+
+        // Barang Penjualan
+        Bpenjualan::where('jenis_penjualan_id', $id)->delete();
+        // Barang Penjualan
+
+        Jpenjualan::find($id)->delete();
+
         Alert::success('Berhasil', 'Hapus Data Jenis Penjualan');
         return redirect('/jenis-penjualan');
     }

@@ -11,8 +11,7 @@ class Wtransakasi extends Model
     use HasFactory;
 
     protected $table = 'waktu_transaksi';
-    protected $fillable = ["created_at", "c", "nama_barang_id", "transaksi_penjualan_id"];
-    public $timestamps = false;
+    protected $fillable = ["created_at", "stok", "jumlah_terjual", "nama_barang_id"];
 
     public function barang_penjualan()
     {

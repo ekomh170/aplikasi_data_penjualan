@@ -50,7 +50,7 @@ class MpenjualanController extends Controller
         $request->validate([
             'stok' => 'required',
             'jumlah_terjual' => 'required',
-            'nama_barang_id' => 'required',
+            'nama_barang_id' => 'required|unique:transaksi_penjualan,nama_barang_id',
         ]);
 
         Tpenjualan::create([

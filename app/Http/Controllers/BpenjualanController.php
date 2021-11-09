@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Jpenjualan;
 use App\Models\Bpenjualan;
+use App\Models\Jpenjualan;
+use App\Models\Tpenjualan;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -101,13 +102,15 @@ class BpenjualanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Bpenjualan  $bpenjualan
+     * @param  \App\Models\Bpenjualan  $Bpenjualan
+     * @param  \App\Models\Tpenjualan  $Tpenjualan
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $Bpenjualan = Bpenjualan::find($id);
-        $Bpenjualan->delete();
+        Tpenjualan::where('nama_barang_id', $id)->delete();
+        Bpenjualan::find($id)->delete();
+
         Alert::success('Berhasil', 'Menghapus Data Barang Penjualan');
         return redirect('/barang-penjualan');
     }
