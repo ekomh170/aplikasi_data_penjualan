@@ -23,7 +23,7 @@
                     href="{{ route('jenis-penjualan.index') }}">
                     <i data-feather="database" class="nav-icon icon-xs me-2">
                     </i>
-                    Jenis Data Penjualan
+                    Data Jenis Barang
                 </a>
             </li>
 
@@ -32,7 +32,7 @@
                     href="{{ route('barang-penjualan.index') }}">
                     <i data-feather="database" class="nav-icon icon-xs me-2">
                     </i>
-                    Barang Data Penjualan
+                    Data Barang
                 </a>
             </li>
 
@@ -41,7 +41,7 @@
                     href="{{ route('master-penjualan.index') }}">
                     <i data-feather="database" class="nav-icon icon-xs me-2">
                     </i>
-                    Master Data Penjualan
+                    Data Master Penjualan
                 </a>
             </li>
 
@@ -50,7 +50,16 @@
                     href="{{ route('transaksi-penjualan.index') }}">
                     <i data-feather="database" class="nav-icon icon-xs me-2">
                     </i>
-                    Transaksi Data Penjualan
+                    Data Log Transaksi
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link @@if (context.page === 'layouts') { active }"
+                    href="{{ route('perbandingan-penjualan.index') }}">
+                    <i data-feather="database" class="nav-icon icon-xs me-2">
+                    </i>
+                    Perbandingan Jenis Data
                 </a>
             </li>
 

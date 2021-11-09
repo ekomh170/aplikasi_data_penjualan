@@ -16,7 +16,13 @@ class BpenjualanController extends Controller
      */
     public function index()
     {
-        $bpenjualan = Bpenjualan::all();
+        $barang_penjualan = Bpenjualan::latest();
+
+        if (request('search')) {
+            $barang_penjualan->where('nama_barang', 'like', '%' . request('search') . '%');
+        }
+
+        $bpenjualan = $barang_penjualan->get();
         return view('Barangpenjualan.index', compact('bpenjualan'));
     }
 

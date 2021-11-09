@@ -17,7 +17,13 @@ class MpenjualanController extends Controller
      */
     public function index()
     {
-        $tpenjualan = Tpenjualan::all();
+        $master_penjualan = Tpenjualan::latest();
+
+        if (request('search')) {
+            $master_penjualan->where('nama_barang', 'like', '%' . request('search') . '%');
+        }
+
+        $tpenjualan = $master_penjualan->get();
         return view('Masterpenjualan.index', compact('tpenjualan'));
     }
 

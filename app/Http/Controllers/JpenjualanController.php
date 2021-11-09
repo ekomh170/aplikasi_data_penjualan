@@ -15,7 +15,13 @@ class JpenjualanController extends Controller
      */
     public function index()
     {
-        $jpenjualan = Jpenjualan::all();
+        $jenis_penjualan = Jpenjualan::latest();
+
+        if (request('search')) {
+            $jenis_penjualan->where('jenis_penjualan', 'like', '%' . request('search') . '%');
+        }
+
+        $jpenjualan = $jenis_penjualan->get();
         return view('Jenispenjualan.index', compact('jpenjualan'));
     }
 
