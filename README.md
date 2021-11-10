@@ -8,6 +8,20 @@ Membuat Aplikasi Berbasis Web Data Penjualan Menggunakan Laravel 8, Yang Bertuju
 
 <img src="public/assets_readme/img/Halaman_Pendataan.PNG" alt="Halaman Pendataan">
 
+## Desain ERD
+
+<img src="public/assets_readme/img/Desain_ERD.png" alt="Desain ERD">
+
+<h3>Notes : </h3>
+
+<b>Jenis Penjualan : </b>Digunakan untuk menyimpan data jenis penjualan.
+
+<b>Transaksi Penjualan : </b>Digunakan untuk menyimpan data transaksi penjualan. (Master Data Penjualan).
+
+<b>Barang Penjualan : </b>Digunakan untuk menyimpan data barang penjualan.
+
+<b>Waktu Transaksi : </b>Digunakan untuk menyimpan data kapan waktu transaksi.
+
 ## Cara Instalasi ke Server Lokal :
 
 -   Follow Github Saya
