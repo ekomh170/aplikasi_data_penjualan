@@ -37,12 +37,30 @@ Membuat Aplikasi Berbasis Web Data Penjualan Menggunakan Laravel 8, Yang Bertuju
 
 ## Fitur Aplikasi
 
-<!-- -   Dashboard Data Penjualan
--   Tampilan Data Penjualan
--   Tambah Data Penjualan
--   Edit Data Penjualan
--   Ubah Data Penjualan
--   Hapus Data Penjualan -->
+-   Halaman Utama (Halaman Dashboard)<br><br>
+
+A. Menu Data Jenis Barang<br>
+
+-   Tambah Data (Data Jenis Barang)<br>
+-   Ubah Data (Data Jenis Barang)<br>
+-   Hapus Data (Data Jenis Barang)<br>
+
+B. Menu Data Master Penjualan<br>
+
+-   Tambah Data (Data Master Penjualan)<br>
+-   Ubah Data (Data Master Penjualan)<br>
+-   Hapus Data (Data Master Penjualan)<br>
+
+C. Menu Data Log Transaksi<br>
+
+-   Reset Data (Data Log Transaksi)<br>
+
+D. Menu Perbandingan Jenis Data
+
+E. Menu Tambahan
+
+-   Pembuat Website
+-   Dokumentasi Singkat
 
 ## Alat Yang Digunakan Untuk Membuat Web :
 
