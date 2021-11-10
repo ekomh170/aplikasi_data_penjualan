@@ -2,12 +2,6 @@
 
 Membuat Aplikasi Berbasis Web Data Penjualan Menggunakan Laravel 8, Yang Bertujuan Untuk Presentasi Kepada Tester. Aplikasi Berbasis Web Data Penjualan dengan Laravel 8 adalah aplikasi yang berfungsi untuk melakukan pendataan barang.
 
-## Foto Aplikasi Data Penjualan
-
-<img src="public/assets_readme/img/Halaman_Utama.PNG" alt="Halaman Utama">
-
-<img src="public/assets_readme/img/Halaman_Pendataan.PNG" alt="Halaman Pendataan">
-
 ## Desain ERD
 
 <img src="public/assets_readme/img/Desain_ERD.png" alt="Desain ERD">
@@ -21,6 +15,12 @@ Membuat Aplikasi Berbasis Web Data Penjualan Menggunakan Laravel 8, Yang Bertuju
 <b>Barang Penjualan : </b>Digunakan untuk menyimpan data barang penjualan.
 
 <b>Waktu Transaksi : </b>Digunakan untuk menyimpan data kapan waktu transaksi.
+
+## Foto Aplikasi Data Penjualan
+
+<img src="public/assets_readme/img/Halaman_Utama.PNG" alt="Halaman Utama">
+
+<img src="public/assets_readme/img/Halaman_Pendataan.PNG" alt="Halaman Pendataan">
 
 ## Cara Instalasi ke Server Lokal :
 
