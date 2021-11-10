@@ -18,7 +18,7 @@ class JpenjualanController extends Controller
     public function index()
     {
         $active = "jenis_penjualan";
-        $jpenjualan = Jpenjualan::latest()->filter()->get();
+        $jpenjualan = Jpenjualan::latest()->filter(request(['search']))->paginate(5)->WithQueryString();
         return view('Jenispenjualan.index', compact('jpenjualan', 'active'));
     }
 

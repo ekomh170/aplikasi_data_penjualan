@@ -12,14 +12,22 @@ class Tpenjualan extends Model
     protected $table = 'transaksi_penjualan';
     protected $fillable = ["stok", "jumlah_terjual", "nama_barang_id"];
 
-    public function scopeFilter($query)
+    public function scopeFilter($query, array $filters)
     {
-        if (request('search')) {
-            return $query->where('nama_barang', 'like', '%' . request('search') . '%')
-                ->join('barang_penjualan', 'barang_penjualan.id', '=', 'transaksi_penjualan.nama_barang_id');
-            // ->join('jenis_penjualan', 'jenis_penjualan.id', '=', 'barang_penjualan.jenis_penjualan_id');
-        }
+        $query->when(
+            $filters['search'] ?? false,
+            function ($query, $search) {
+                return $query
+                    ->whereHas('barang_penjualan')
+                    ->join('barang_penjualan', 'barang_penjualan.id', '=', 'transaksi_penjualan.nama_barang_id')
+                    ->where('nama_barang', 'like', '%' . $search . '%')
+                    ->orwhere('created_at', 'like', '%' . $search . '%')
+                    ->orWhere('updated_at', 'like', '%' . $search . '%');
+                // ->join('jenis_penjualan', 'jenis_penjualan.id', '=', 'barang_penjualan.jenis_penjualan_id');
+            }
+        );
     }
+
 
     public function barang_penjualan()
     {

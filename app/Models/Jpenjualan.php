@@ -13,13 +13,14 @@ class Jpenjualan extends Model
     protected $table = 'jenis_penjualan';
     protected $fillable = ["jenis_penjualan", "created_at", "updated_at"];
 
-    public function scopeFilter($query)
+    public function scopeFilter($query, array $filters)
     {
-        if (request('search')) {
-            return $query->where('jenis_penjualan', 'like', '%' . request('search') . '%')
-                ->orWhere('created_at', 'like', '%' . request('search') . '%')
-                ->orWhere('updated_at', 'like', '%' . request('search') . '%');
-        }
+
+        $query->when($filters['search'] ?? false, function ($query, $search) {
+            return $query->where('jenis_penjualan', 'like', '%' . $search . '%')
+                ->orWhere('created_at', 'like', '%' . $search . '%')
+                ->orWhere('updated_at', 'like', '%' . $search . '%');
+        });
     }
 
     public function getCreatedAtAttribute()

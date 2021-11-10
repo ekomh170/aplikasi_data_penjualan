@@ -13,11 +13,15 @@ class Bpenjualan extends Model
     protected $fillable = ["nama_barang", "jenis_penjualan_id"];
     public $timestamps = false;
 
-    public function scopeFilter($query)
+    public function scopeFilter($query, array $filters)
     {
-        if (request('search')) {
-            return $query->where('nama_barang', 'like', '%' . request('search') . '%');
-        }
+        $query->when($filters['search'] ?? false, function ($query, $search) {
+            return $query
+                ->whereHas('jenis_penjualan')
+                // ->join('jenis_penjualan', 'barang_penjualan.id ', '=', 'j;enis_penjualan.jenis_penjualan_id')
+                ->where('nama_barang', 'like', '%' . $search . '%');
+            // ->orwhere('jenis_penjualan', 'like', '%' . $search . '%');
+        });
     }
 
     public function jenis_penjualan()

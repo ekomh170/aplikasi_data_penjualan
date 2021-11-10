@@ -20,7 +20,7 @@ class MpenjualanController extends Controller
     public function index()
     {
         $active = "master_penjualan";
-        $tpenjualan = Tpenjualan::latest()->filter()->get();
+        $tpenjualan = Tpenjualan::latest()->filter(request(['search']))->paginate(5)->WithQueryString();
         return view('Masterpenjualan.index', compact('tpenjualan', 'active'));
     }
 

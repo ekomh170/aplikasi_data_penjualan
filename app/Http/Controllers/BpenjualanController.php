@@ -18,7 +18,7 @@ class BpenjualanController extends Controller
     public function index()
     {
         $active = "barang_penjualan";
-        $bpenjualan = Bpenjualan::orderBy('nama_barang', 'asc')->filter()->get();
+        $bpenjualan = Bpenjualan::orderBy('nama_barang', 'asc')->filter(request(['search']))->paginate(5)->WithQueryString();
         return view('Barangpenjualan.index', compact('bpenjualan', 'active'));
     }
 

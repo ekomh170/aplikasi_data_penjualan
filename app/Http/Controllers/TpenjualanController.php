@@ -16,7 +16,7 @@ class TpenjualanController extends Controller
     public function index()
     {
         $active = "transaksi_penjualan";
-        $wtransaksi = Wtransakasi::latest()->filter()->get();
+        $wtransaksi = Wtransakasi::latest()->filter(request(['search']))->paginate(5)->WithQueryString();
         return view('Transaksipenjualan.index', compact('wtransaksi', 'active'));
     }
 
