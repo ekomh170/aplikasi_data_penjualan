@@ -6,6 +6,8 @@ Membuat Aplikasi Berbasis Web Data Penjualan Menggunakan Laravel 8, Yang Bertuju
 
 <img src="public/assets_readme/img/Halaman_Utama.PNG" alt="Halaman Utama">
 
+<img src="public/assets_readme/img/Halaman_Pendataan.PNG" alt="Halaman Pendataan">
+
 ## Cara Instalasi ke Server Lokal :
 
 -   Follow Github Saya
