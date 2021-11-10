@@ -76,7 +76,7 @@ Menu Data Penjualan
                             </table>
                             <div>
                                 <div class="d-flex justify-content-end">
-                                    {{ $jpenjualan->links() }}
+                                    {{ $jpenjualan->links('vendor.pagination.custom') }}
                                 </div>
                             </div>
                         </div>

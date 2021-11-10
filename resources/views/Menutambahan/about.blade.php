@@ -45,7 +45,7 @@ Menu Tambahan
 <div class="py-6">
     <!-- row -->
     <div class="row">
-        <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-6">
+        <div>
             <!-- card -->
             <div class="card">
                 <!-- card body -->
@@ -83,61 +83,13 @@ Menu Tambahan
                 </div>
             </div>
         </div>
-        <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-6">
+        {{-- <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-6">
             <!-- card -->
             <div class="card">
                 <!-- card body -->
                 <div class="card-body">
                     <!-- card title -->
                     <h4 class="card-title mb-4">Projects Contributions</h4>
-                    <div class="d-md-flex justify-content-between
-                          align-items-center mb-4">
-                        <div class="d-flex align-items-center">
-                            <div>
-                                <div class="icon-shape icon-lg border p-4 rounded-1">
-                                    <img src="../assets/images/brand/slack-logo.svg" alt="">
-                                </div>
-                            </div>
-                            <!-- text -->
-                            <div class="ms-3 ">
-                                <h5 class="mb-1"><a href="#" class="text-inherit">Slack Figma Design
-                                        UI</a></h5>
-                                <p class="mb-0 fs-5 text-muted">Project description and details about...</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center ms-10 ms-md-0 mt-3">
-                            <!-- avatar group -->
-                            <div class="avatar-group me-2">
-                                <!-- img -->
-                                <span class="avatar avatar-sm">
-                                    <img alt="avatar" src="../assets/images/avatar/avatar-1.jpg" class="rounded-circle">
-                                </span>
-                                <!-- img -->
-                                <span class="avatar avatar-sm">
-                                    <img alt="avatar" src="../assets/images/avatar/avatar-2.jpg" class="rounded-circle">
-                                </span>
-                                <!-- img -->
-                                <span class="avatar avatar-sm">
-                                    <img alt="avatar" src="../assets/images/avatar/avatar-3.jpg" class="rounded-circle">
-                                </span>
-                            </div>
-                            <div>
-                                <!-- dropdown -->
-                                <div class="dropdown dropstart">
-                                    <a href="#" class="text-muted text-primary-hover" id="dropdownprojectOne"
-                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i data-feather="more-vertical" class="icon-xxs"></i>
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownprojectOne">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else
-                                            here</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="d-md-flex justify-content-between
                           align-items-center mb-4">
                         <div class="d-flex align-items-center">
@@ -341,7 +293,7 @@ Menu Tambahan
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
     </div>
 </div>

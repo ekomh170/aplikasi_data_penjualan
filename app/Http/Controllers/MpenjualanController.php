@@ -31,8 +31,10 @@ class MpenjualanController extends Controller
      */
     public function create()
     {
+        $active = "master_penjualan";
+
         $barang_penjualan = Bpenjualan::all();
-        return view('Masterpenjualan.create', compact('barang_penjualan'));
+        return view('Masterpenjualan.create', compact('barang_penjualan', 'active'));
     }
 
     /**
@@ -78,9 +80,10 @@ class MpenjualanController extends Controller
      */
     public function edit($id)
     {
+        $active = "master_penjualan";
         $tpenjualan = Tpenjualan::find($id);
         $barang_penjualan = Bpenjualan::all();
-        return view('Masterpenjualan.edit', compact('tpenjualan', 'barang_penjualan'));
+        return view('Masterpenjualan.edit', compact('tpenjualan', 'barang_penjualan', 'active'));
     }
 
     /**

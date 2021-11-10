@@ -29,8 +29,9 @@ class BpenjualanController extends Controller
      */
     public function create()
     {
+        $active = "barang_penjualan";
         $jenis_p = Jpenjualan::all();
-        return view('Barangpenjualan.create', compact('jenis_p'));
+        return view('Barangpenjualan.create', compact('jenis_p', 'active'));
     }
 
     /**
@@ -63,9 +64,10 @@ class BpenjualanController extends Controller
      */
     public function edit($id)
     {
+        $active = "barang_penjualan";
         $bpenjualan = Bpenjualan::find($id);
         $jenis_p = Jpenjualan::all();
-        return view('Barangpenjualan.edit', compact('bpenjualan', 'jenis_p'));
+        return view('Barangpenjualan.edit', compact('bpenjualan', 'jenis_p', 'active'));
     }
 
     /**

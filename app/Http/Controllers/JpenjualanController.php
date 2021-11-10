@@ -29,7 +29,8 @@ class JpenjualanController extends Controller
      */
     public function create()
     {
-        return view('Jenispenjualan.create');
+        $active = "jenis_penjualan";
+        return view('Jenispenjualan.create', compact('active'));
     }
 
     /**
@@ -60,8 +61,9 @@ class JpenjualanController extends Controller
      */
     public function edit($id)
     {
+        $active = "jenis_penjualan";
         $jpenjualan = Jpenjualan::find($id);
-        return view('Jenispenjualan.edit', compact('jpenjualan'));
+        return view('Jenispenjualan.edit', compact('jpenjualan', 'active'));
     }
 
     /**

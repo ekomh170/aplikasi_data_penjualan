@@ -67,7 +67,7 @@ Menu Data Penjualan
                             </table>
                             <div>
                                 <div class="d-flex justify-content-end">
-                                    {{ $wtransaksi->links() }}
+                                    {{ $wtransaksi->links('vendor.pagination.custom') }}
                                 </div>
                             </div>
                         </div>
